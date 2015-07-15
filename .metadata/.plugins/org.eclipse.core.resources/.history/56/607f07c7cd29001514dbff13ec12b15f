@@ -1,0 +1,6 @@
+
+public class Fuhao {
+	public void fuhao(int x){
+		System.out.println(Integer.toBinaryString(x));
+	}
+}

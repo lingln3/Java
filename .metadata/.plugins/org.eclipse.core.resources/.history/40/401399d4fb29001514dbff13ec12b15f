@@ -1,0 +1,39 @@
+import java.util.Random;
+
+/*
+ * 产生25个随机数。
+ * 对每个随机数，使用if-else语句将其分类为><=紧随他而随机生成的值。
+ */
+public class RandNum {
+	public void randNum(){
+		Random random = new Random();
+		int[] num ;
+		int[] dayu ;
+		int[] xiaoyu;
+		int[] dengyu ;
+		int i =0,m =0,n = 0,p = 0;
+		do{
+			num[i] = random.nextInt();
+			i++;
+		}while(i<=25);
+		
+		for(int j = 0; j <25; j++){
+			if(num[j] > num[25]){
+				dayu[m] = num[j];
+				m++;				
+			}
+			else if(num[j] < num[25]){
+				xiaoyu[n] = num[j];
+				n++;
+			}
+			else{
+				dengyu[p] = num[j];
+				p++;
+			}
+		}
+		
+		System.out.println(dayu);
+		System.out.println(xiaoyu);
+		System.out.println(dengyu);
+	}
+}

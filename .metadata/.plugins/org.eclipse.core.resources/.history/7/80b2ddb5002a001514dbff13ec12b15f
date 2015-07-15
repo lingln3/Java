@@ -1,0 +1,17 @@
+/*
+ *´òÓ¡ËØÊı
+ */
+public class Sushu {
+	public void PrintSuShu(){
+		int i = 0;
+		boolean b = false;
+		for(i = 2;i<100000;i++){
+			for(int j = 2; j < i; j++){
+				if(i%j == 0) {
+					System.out.print(i+ ",");					
+					break;
+				}
+			}			
+		}
+	}
+}

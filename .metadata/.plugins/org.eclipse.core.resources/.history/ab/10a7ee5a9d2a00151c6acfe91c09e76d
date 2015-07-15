@@ -1,0 +1,9 @@
+
+public class StringYY {
+	StringYY(String s){
+		System.out.println("s = "+s);
+	}
+	public void stringYY(){
+		
+	}
+}

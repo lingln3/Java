@@ -1,0 +1,8 @@
+
+public class Main {
+	public static void main(String[] args){
+		RandomNum ran = new RandomNum();
+		boolean r = ran.condition();
+		ran.compare();
+	}
+}

@@ -1,0 +1,6 @@
+/*
+ * 产生随机数，直到符合特定的条件为止
+ */
+public class RandomNum {
+
+}

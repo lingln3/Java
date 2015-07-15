@@ -1,0 +1,11 @@
+
+public class Exercise10 {
+	public static void main(String[] args){
+		int x = 0xaaaaaaaa;
+		int y = 0x55555555;
+		
+		System.out.println(Integer.toBinaryString((x&y)));
+		System.out.println(Integer.toBinaryString((x^y)));
+		System.out.println(Integer.toBinaryString((x|y));
+	}
+}
