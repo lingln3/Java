@@ -1,0 +1,33 @@
+package com.basic.learning;
+
+public class IntegerLearning {
+	public static void main(String[] args)
+	{
+	/*	String s = "andkjkdf";
+		int i = Integer.parseInt("123");
+		Integer in = new Integer("123");
+		int value = in.intValue();
+		String s1 = Integer.toString(120, 4);
+		System.out.println(i == in);
+		System.out.println(Integer.parseInt("121",12));
+		System.out.println(s1);
+		for(char c:s.toCharArray())
+		{
+			System.out.println(Character.toUpperCase(c));
+		}*/
+		Integer a = new Integer("31");
+		Integer b = new Integer(3);
+		System.out.println(a == b);
+		System.out.println(a.equals(b));
+		System.out.println(a.compareTo(b));
+		System.out.println(b.compareTo(a));
+		int num = 4;
+		Integer aa = new Integer(num);
+		Integer ab = 128;
+		Integer ac = 128;
+		System.out.println(ab==ac);
+		System.out.println(ab.equals(ac));
+		Integer c= aa+ab;
+		System.out.println(3/0);
+	}
+}

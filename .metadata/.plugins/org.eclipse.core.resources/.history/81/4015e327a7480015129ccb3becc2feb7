@@ -1,0 +1,10 @@
+package com.basic.learning;
+
+public class IntegerLearning {
+	public static void main(String[] args)
+	{
+		String s = "andkjkdf";
+		int i = Integer.parseInt("123");
+		char c =
+	}
+}

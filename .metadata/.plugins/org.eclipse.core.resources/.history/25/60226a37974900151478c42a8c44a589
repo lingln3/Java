@@ -1,0 +1,16 @@
+package com.basic.learning;
+
+/*
+ * 使用LinkedList来模拟一个堆栈或队列数据结构。
+ * 堆栈：先进后出（FILO，first in last out）。
+ * 队列：先进先出（FIFO）。
+ * 
+ * 我们应该描述这样一个容器，给使用者提供一个容器对象，完成这两种结构中的一种
+ */
+public class LinkedListTest {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

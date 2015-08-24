@@ -1,0 +1,15 @@
+package com.collection.learning;
+
+import java.util.Scanner;
+import java.util.SortedMap;
+
+public class LUF {
+	static SortedMap<String,Cache> cacheManager = new TreeMap<String,Cache>();
+	static int CACHE_NUM = 0;
+	public static void main(String[] args) {
+		
+		System.out.println("请输入cache的大小（整数）：");
+		Scanner scan = new Scanner(System.in);
+		
+	}
+}

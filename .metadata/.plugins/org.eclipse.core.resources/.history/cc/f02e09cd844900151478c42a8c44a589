@@ -1,0 +1,62 @@
+package com.basic.learning;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+public class ListDemo2 {
+
+	public static void main(String[] args) {
+		List list = new ArrayList();
+//		show(list);
+		list.add("abc1");
+		list.add("abc2");
+		list.add("abc3");
+		list.add("abc4");
+		System.out.println(list);
+		/*for(Iterator it = list.iterator();it.hasNext();)
+		{
+			Object o = it.next();
+			if(o.equals("abc3"))
+				list.add("hehe");
+			else 
+				System.out.println("next:"+it.next());
+		}*/
+		ListIterator listIterator = list.listIterator();//获取列表迭代器对象
+		while(listIterator.hasNext())
+		{
+			Object obj = listIterator.next();
+			if(obj.equals("abc3"))
+				{
+				listIterator.add("hehe");
+				}
+		}
+		System.out.println(list);
+		System.out.println("next:"+listIterator.hasNext()+"  "+"previous:"+listIterator.hasPrevious());
+	}
+
+	private static void show(List list) {
+		list.add("abc1");
+		list.add(2);
+		list.add("abc3");
+		list.add("abc4");
+		
+		Iterator it = list.iterator();
+		while(it.hasNext())
+		{
+			System.out.print(it.next());
+		}
+		System.out.println();
+		for(Iterator itr = list.iterator(); itr.hasNext();)
+		{
+			System.out.print(itr.next());
+		}
+		System.out.println();
+		for(int i=0; i<list.size();i++)
+		{
+			System.out.print(list.get(i));
+		}
+	}
+
+}

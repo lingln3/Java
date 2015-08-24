@@ -1,0 +1,37 @@
+package com.first.qiongju;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class QiongJuDemo1 {
+	public char[] operator = {' ','+','-','*','/'};
+	//获取输入数据
+	public ArrayList<Integer> inPut()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("请输入等式左边的整数(以空格区分)：");
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		while(scan.hasNext())
+		{
+			list.add(scan.nextInt());
+		}		
+		return list;
+	}
+	//获取计算的结果
+	public int inResult()
+	{
+		System.out.println("请输入运算结果：");
+		Scanner scan = new Scanner(System.in);
+		return scan.nextInt();
+	}
+	
+	public static void main(String[] args) {
+		QiongJuDemo1 demo = new QiongJuDemo1();
+		ArrayList<Integer> input = demo.inPut();
+		int size = input.size();
+		int result = demo.inResult();
+		char[] operater = demo.operator;
+		int size_oper = operater.length;
+	}
+
+}

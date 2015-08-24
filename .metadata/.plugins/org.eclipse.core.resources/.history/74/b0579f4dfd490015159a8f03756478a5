@@ -1,0 +1,22 @@
+package com.first.qiongju;
+
+import java.util.Scanner;
+
+public class QiongJuDemo1 {
+	public int[] inPut()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("请输入5个整数(以空格区分)：");
+		int[] input = new int[5];
+		for(int i=0; i<input.length;i++)
+		{
+			input[i] = scan.nextInt();
+		}
+		return input;
+	}
+	public static void main(String[] args) {
+		QiongJuDemo1 demo = new QiongJuDemo1();
+		int[] input = demo.inPut(); 
+	}
+
+}

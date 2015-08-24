@@ -1,0 +1,81 @@
+package com.collection.learning;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+
+public class LUF {
+	static SortedMap<String,Cache> cacheMap = new TreeMap<String,Cache>();
+	static int CACHE_NUM = 0;
+	
+	//设置cache的大小
+	public void setCapacity()
+	{
+		System.out.println("请输入cache的大小：");
+		Scanner scan = new Scanner(System.in);
+		CACHE_NUM = scan.nextInt();
+	}
+	private static class ValueComparator implements Comparator<Map.Entry<String,Cache>>
+	{
+		public int compare(Map.Entry<String,Cache> m,Map.Entry<String,Cache> n)
+		{
+			return n.getValue().usedcount-m.getValue().usedcount;
+		}
+	}
+	
+	public static Cache getCache(String id)
+	{
+		if(cacheMap.get(id)==null)
+		{
+			Object val=getFromDB(id);
+			cacheMap.put(id, new Cache(id,val));
+		}
+		Cache res=cacheMap.get(id);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		res.addCount();
+		return cacheMap.get(id);
+	}
+
+	public void putCache(Cache c)
+	{
+		cacheMap.put(c.id, c);
+	}
+	
+	public static Object getFromDB(String id)
+	{
+		System.out.println("缓慢地从内存中读取id="+id+"对应的数据。。。");	
+		return new String("value"+id);
+	}
+	
+	public static void refreshCaches()
+	{
+		System.out.println("刷新缓存。。。");
+
+		List<Map.Entry<String,Cache>> list=new ArrayList();
+		list.addAll(cacheMap.entrySet());
+		ValueComparator comparator=new ValueComparator();
+		Collections.sort(list,comparator);
+
+		for(int i=CACHE_NUM;i<list.size();i++)
+		{
+			String id=(String) list.get(i).getKey();
+			Object val=getFromDB(id);
+			cacheMap.put(id, new Cache(id,val));
+		}
+	}
+	public static void main(String[] args) {
+		//获得cache大小
+		
+		
+	}
+}

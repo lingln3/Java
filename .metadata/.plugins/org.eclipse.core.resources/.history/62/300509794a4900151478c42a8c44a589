@@ -1,0 +1,128 @@
+package com.collection.learning;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+
+public class LUF {
+	static SortedMap<String,Cache> cacheMap = new TreeMap<String,Cache>();
+	static int CACHE_NUM = 0;
+	
+	//设置cache的大小
+	public static void setCapacity()
+	{
+		System.out.println("请输入cache的大小：");
+		Scanner scan = new Scanner(System.in);
+		CACHE_NUM = scan.nextInt();
+	}
+	//比较
+	private static class ValueComparator implements Comparator<Map.Entry<String,Cache>>
+	{
+		public int compare(Map.Entry<String,Cache> m,Map.Entry<String,Cache> n)
+		{
+			return n.getValue().usedcount-m.getValue().usedcount;
+		}
+	}
+	//获取数据
+	public static Cache get(String id)
+	{
+		if(cacheMap.get(id)==null)
+		{
+			Object val=getFromDB(id);
+			cacheMap.put(id, new Cache(id,val));
+		}
+		Cache res=cacheMap.get(id);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		res.addCount();
+		return cacheMap.get(id);
+	}
+	//put存放数据
+	public void put(Cache c)
+	{
+		cacheMap.put(c.id, c);
+	}
+	
+	public static Object getFromDB(String id)
+	{
+		System.out.println("缓慢地从内存中读取id="+id+"对应的数据。。。");	
+		return new String("value"+id);
+	}
+	
+	public static void refreshCaches()
+	{
+		System.out.println("刷新缓存。。。");
+
+		List<Map.Entry<String,Cache>> list=new ArrayList();
+		list.addAll(cacheMap.entrySet());
+		ValueComparator comparator=new ValueComparator();
+		Collections.sort(list,comparator);
+
+		for(int i=CACHE_NUM;i<list.size();i++)
+		{
+			String id=(String) list.get(i).getKey();
+			Object val=getFromDB(id);
+			cacheMap.put(id, new Cache(id,val));
+		}
+	}
+	public static void main(String[] args) {
+		LUF.setCapacity();
+		
+		Cache cache1=new Cache("1","value1");
+		Cache cache2=new Cache("2","value2");
+		Cache cache3=new Cache("3","value2");
+		Cache cache4=new Cache("4","value2");
+		Cache cache5=new Cache("5","value2");
+		Cache cache6=new Cache("6","value2");
+		Cache cache7=new Cache("7","value2");
+		CacheManager.putCache(cache1);
+		CacheManager.putCache(cache2);
+		CacheManager.putCache(cache3);
+		CacheManager.putCache(cache4);
+		CacheManager.putCache(cache5);
+		CacheManager.putCache(cache6);
+		CacheManager.putCache(cache7);
+		CacheManager.getCache("1");
+		CacheManager.getCache("1");
+		CacheManager.getCache("2");
+		CacheManager.getCache("3");
+		CacheManager.getCache("3");
+		CacheManager.getCache("4");
+		CacheManager.getCache("4");
+		CacheManager.getCache("6");
+		CacheManager.getCache("5");
+		CacheManager.getCache("5");
+		CacheManager.getCache("6");
+		CacheManager.getCache("6");
+		refreshCaches();
+
+		Thread refreshTD=new Thread()
+		{
+			public void run()
+			{
+				while(true)
+				{
+					refreshCaches();
+					try {
+						Thread.sleep(1000);//每一秒刷新一次
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		};
+				refreshTD.start();
+	}
+		
+		
+	}
+}

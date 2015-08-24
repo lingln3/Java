@@ -1,0 +1,11 @@
+package com.basic.learning;
+
+public class Time {
+	private static int hour = 24;
+	private static int min = 60;
+	public static void main(String[] args) {
+		int time = hour*min;
+		
+	}
+
+}

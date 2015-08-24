@@ -1,0 +1,64 @@
+package com.first.qiongju;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class QiongJuDemo1 {
+	public char[] operator = {' ','+','-','*','/'};
+	//获取输入数据
+	public ArrayList<Integer> inPut()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("请输入等式左边的整数(以空格区分)：");
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		while(scan.hasNext())
+		{
+			list.add(scan.nextInt());
+		}		
+		return list;
+	}
+	//获取计算的结果
+	public int inResult()
+	{
+		System.out.println("请输入运算结果：");
+		Scanner scan = new Scanner(System.in);
+		return scan.nextInt();
+	}
+	//运算结果求解
+	public int getResult(ArrayList<Integer> in,char[] oper)
+	{
+		int result = 0;
+		int size = in.size();
+		return result;
+	}
+	public static void main(String[] args) {
+		QiongJuDemo1 demo = new QiongJuDemo1();
+		ArrayList<Integer> input = demo.inPut();
+		int size = input.size();
+		int result = demo.inResult();
+		int temp_res = 0;
+		char[] operater = demo.operator;
+		int size_oper = operater.length;
+		char[] oper_test = new char[size-1];
+/*		while(!(result == temp_res))
+		{
+		}*/
+		for(int i1= 0; i1<size-1;i1++)
+		{
+			oper_test[0] = operater[i1];
+			for(int i2=0;i2<size-1;i2++)
+			{
+				oper_test[1] = operater[i2];
+				for(int i3=0;i3<size-1;i3++)
+				{
+					oper_test[2] = operater[i3];
+					for(int i4=0; i4<size-1; i4++)
+					{
+						oper_test[3] = operater[i4];
+					}
+				}
+			}
+		}
+	}
+
+}

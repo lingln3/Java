@@ -1,0 +1,14 @@
+package com.basic.learning;
+
+/*
+ * 使用LinkedList来模拟一个堆栈或队列数据结构。
+ * 堆栈：先进后出
+ * 队列：
+ */
+public class LinkedListTest {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

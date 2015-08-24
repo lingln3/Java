@@ -1,0 +1,156 @@
+package com.collection.learning;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+
+public class LUF {
+	static SortedMap<String,Cache> cacheMap = new TreeMap<String,Cache>();
+	static int CACHE_NUM = 0;
+	
+	//设置cache的大小
+	public static void setCapacity()
+	{
+		System.out.println("请输入cache的大小：");
+		Scanner scan = new Scanner(System.in);
+		CACHE_NUM = scan.nextInt();
+	}
+	//比较
+	private static class ValueComparator implements Comparator<Map.Entry<String,Cache>>
+	{
+		public int compare(Map.Entry<String,Cache> m,Map.Entry<String,Cache> n)
+		{
+			return n.getValue().usedcount-m.getValue().usedcount;
+		}
+	}
+	//获取数据
+	public static Cache get(String id)
+	{
+		if(cacheMap.get(id)==null)
+		{
+			Object val=getFromDB(id);
+			cacheMap.put(id, new Cache(id,val));
+		}
+		Cache res=cacheMap.get(id);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		res.addCount();
+		return cacheMap.get(id);
+	}
+	//put存放数据
+	public void put(Cache c)
+	{
+		System.out.println("输入cache，以key");
+		cacheMap.put(c.id, c);
+	}
+	
+	public static Object getFromDB(String id)
+	{
+		System.out.println("缓慢地从内存中读取id="+id+"对应的数据。。。");	
+		return new String("value"+id);
+	}
+	
+	public static void refreshCaches()
+	{
+		System.out.println("刷新缓存。。。");
+
+		List<Map.Entry<String,Cache>> list=new ArrayList();
+		list.addAll(cacheMap.entrySet());
+		ValueComparator comparator=new ValueComparator();
+		Collections.sort(list,comparator);
+
+		for(int i=CACHE_NUM;i<list.size();i++)
+		{
+			String id=(String) list.get(i).getKey();
+			Object val=getFromDB(id);
+			cacheMap.put(id, new Cache(id,val));
+		}
+	}
+	public static void main(String[] args) {
+		LUF.setCapacity();
+		LUF luf = new LUF();
+		Cache c = new Cache("1","cache1");
+		luf.put(c);
+		
+		refreshCaches();
+
+		Thread refreshTD=new Thread()
+		{
+			public void run()
+			{
+				while(true)
+				{
+					refreshCaches();
+					try {
+						Thread.sleep(1000);//每一秒刷新一次
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		};
+				refreshTD.start();
+	}	
+}
+class Cache
+{
+	public static int CACHE_NUM = 0;
+	String id;//主键
+	Object val;
+	Date startdt;//标记新建时间
+	int usedcount=0;//标记使用次数
+	
+	
+	public Cache(String id,Object val)
+	{
+		this.id=id;
+		this.val=val;
+		this.startdt=new Date();
+		usedcount++;
+	}
+	
+	//设置cache的大小
+	public static void setCapacity()
+	{
+		System.out.println("请输入cache的大小：");
+		Scanner scan = new Scanner(System.in);
+		CACHE_NUM = scan.nextInt();
+	}
+	
+	public void setValue(Object val)
+	{
+		this.val=val;
+	}
+	
+	public void addCount()
+	{
+		usedcount++;
+	}
+	
+	public void showInfo()
+	{
+		System.out.println("Cache的ID是:   "+id+"   Cache的值是:   "+val);
+	}
+		
+	public int compareTo(Object o) {
+		if(o instanceof Cache)
+		{
+			Cache c=(Cache) o;
+			if(this.usedcount>c.usedcount)
+				return 1;
+			else
+				return -1;
+		}
+		return 0;
+	}
+}

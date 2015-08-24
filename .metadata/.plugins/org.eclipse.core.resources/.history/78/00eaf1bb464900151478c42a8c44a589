@@ -1,0 +1,46 @@
+package com.collection.learning;
+
+import java.util.Comparator;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class LUF {
+	static SortedMap<String,Cache> cacheMap = new TreeMap<String,Cache>();
+	static int CACHE_NUM = 0;
+	
+	private static class ValueComparator implements Comparator<Map.Entry<String,Cache>>
+	{
+		public int compare(Map.Entry<String,Cache> m,Map.Entry<String,Cache> n)
+		{
+			return n.getValue().usedcount-m.getValue().usedcount;
+		}
+	}
+	
+	public static Cache getCache(String id)
+	{
+		if(cacheMap.get(id)==null)
+		{
+			Object val=getFromDB(id);
+			cacheMap.put(id, new Cache(id,val));
+		}
+		Cache res=cacheMap.get(id);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		res.addCount();
+		return cacheMap.get(id);
+	}
+
+	
+	public static void main(String[] args) {
+		//获得cache大小
+		System.out.println("请输入cache的大小（整数）：");
+		Scanner scan = new Scanner(System.in);
+		CACHE_NUM = scan.nextInt();
+		
+	}
+}
