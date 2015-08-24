@@ -1,0 +1,22 @@
+package com.basic.learning;
+
+public class StringHashCode {
+	
+	public static int getHashCode(String s)
+	{
+		int value = 0;
+		int length = s.length();
+		for(int i=0; i<length;i++)
+		{
+			length = length-1;
+			value = value + (int) (s.charAt(i)*Math.pow(31, length));
+		}
+		return value;
+	}
+	public static void main(String[] args) {
+		String s = "abcde";
+		System.out.println(s.hashCode());
+		System.out.println(getHashCode(s));
+	}
+
+}

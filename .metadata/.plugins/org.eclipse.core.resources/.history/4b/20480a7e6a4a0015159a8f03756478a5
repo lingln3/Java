@@ -1,0 +1,29 @@
+package com.collection.map;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMapDemo {
+	public static void main(String[] args) {
+
+		/*
+		 * 将学生对象和学生的归属地通过key-value存储到map集合中。
+		 * 对学生按照年龄进行排序
+		 */
+		TreeMap<Student,String> tm = new TreeMap<Student,String>();
+		tm.put(new Student("lisi",38),"北京");
+		tm.put(new Student("zhaoliu",24),"上海");
+		tm.put(new Student("xiaoqiang",31),"沈阳");
+		tm.put(new Student("wangwu",28),"大连");
+		tm.put(new Student("zhaoliu",24),"铁岭");
+		tm.put(new Student("zhaoliu",24),"深圳");
+		Iterator<Map.Entry<Student,String>> it = tm.entrySet().iterator();
+		while(it.hasNext())
+		{
+			Student st = (Student) it.next();
+			String value = tm.get(st);
+			System.out.println();
+		}
+	}
+}

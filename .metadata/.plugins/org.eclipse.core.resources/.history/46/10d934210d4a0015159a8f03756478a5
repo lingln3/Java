@@ -1,0 +1,43 @@
+package com.basic.learning;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+import com.basic.learning.bean.Person;
+
+/*
+ * 往HashSet集合中存储Person对象，如果姓名和年龄相同，视为同一个元素
+ *
+ */
+public class HashSetTest {
+	private HashSet has = new HashSet();
+	public void myAdd(Object obj)
+	{
+		if(has.size() == 0)
+		{
+			has.add(obj);
+		}
+		else
+		{
+			for(Object ob:has)
+			{				
+			}
+		}
+		
+	}
+	public static void main(String[] args) {
+		HashSet hash = new HashSet();
+		hash.add(new Person("lina1",21));
+		hash.add(new Person("lina2",20));
+		hash.add(new Person("lina3",19));
+		hash.add(new Person("lina4",18));
+		hash.add(new Person("lina5",17));
+		
+		Iterator it = hash.iterator();
+		while(it.hasNext())
+		{
+			Person p = (Person)it.next();
+			System.out.println("name:"+p.getName()+",age:"+p.getAge());
+		}
+	}
+}

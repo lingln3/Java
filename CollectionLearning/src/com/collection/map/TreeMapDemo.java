@@ -1,0 +1,72 @@
+package com.collection.map;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+
+import com.collection.treeset.CompareByLength;
+
+public class TreeMapDemo {
+	public static void main(String[] args) {
+
+		/*
+		 * 将学生对象和学生的归属地通过key-value存储到map集合中。
+		 * 对学生按照年龄进行排序
+		 */
+//		demo1();
+//		demo2();
+		demo3();
+	}
+	//自定义比较器，根据姓名长度比较，如有相同，再根据姓名比较
+	public static void demo3() {
+		TreeMap<Student,String> tm = new TreeMap<Student,String>(new CompareByLength());
+		tm.put(new Student("lisi",38),"北京");
+		tm.put(new Student("zhaoliu",24),"上海");
+		tm.put(new Student("xiaoqiang",31),"沈阳");
+		tm.put(new Student("wangwu",28),"大连");
+		tm.put(new Student("zhaoliu",24),"铁岭");
+		tm.put(new Student("zhaoliu",24),"深圳");
+		Iterator<Map.Entry<Student,String>> it = tm.entrySet().iterator();
+		while(it.hasNext())
+		{
+			Map.Entry<Student, String> me = it.next();
+			String value = me.getValue();
+			System.out.println(me.getKey().getName()+":"+me.getKey().getAge()+"……"+value);
+		}
+	}
+	//自定义比较器，根据姓名进行比较
+	public static void demo2() {
+		@SuppressWarnings("unchecked")
+		TreeMap<Student,String> tm = new TreeMap<Student,String>(new CompareByName());
+		tm.put(new Student("lisi",38),"北京");
+		tm.put(new Student("zhaoliu",24),"上海");
+		tm.put(new Student("xiaoqiang",31),"沈阳");
+		tm.put(new Student("wangwu",28),"大连");
+		tm.put(new Student("zhaoliu",24),"铁岭");
+		tm.put(new Student("zhaoliu",24),"深圳");
+		Iterator<Map.Entry<Student,String>> it = tm.entrySet().iterator();
+		while(it.hasNext())
+		{
+			Map.Entry<Student, String> me = it.next();
+			String value = me.getValue();
+			System.out.println(me.getKey().getName()+":"+me.getKey().getAge()+"……"+value);
+		}
+	}
+	//通过元素自身特性进行排序
+	public static void demo1() {
+		TreeMap<Student,String> tm = new TreeMap<Student,String>();
+		tm.put(new Student("lisi",38),"北京");
+		tm.put(new Student("zhaoliu",24),"上海");
+		tm.put(new Student("xiaoqiang",31),"沈阳");
+		tm.put(new Student("wangwu",28),"大连");
+		tm.put(new Student("zhaoliu",24),"铁岭");
+		tm.put(new Student("zhaoliu",24),"深圳");
+		Iterator<Map.Entry<Student,String>> it = tm.entrySet().iterator();
+		while(it.hasNext())
+		{
+			Map.Entry<Student, String> me = it.next();
+			String value = me.getValue();
+			System.out.println(me.getKey().getName()+":"+me.getKey().getAge()+"……"+value);
+		}
+	}
+}

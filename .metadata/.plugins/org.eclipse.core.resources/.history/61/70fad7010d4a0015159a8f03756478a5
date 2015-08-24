@@ -1,0 +1,10 @@
+package com.basic.learning;
+/*
+ * 往HashSet集合中存储Person对象，如果姓名和年龄相同，视为同一个元素
+ *
+ */
+public class HashSetTest {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/BasicData/src/com/basic/learning/LinkedListTest.java"/>
+<listEntry value="/BasicData/src/com/connection/linkedlist/LinkedListTest.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.basic.learning.LinkedListTest"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.connection.linkedlist.LinkedListTest"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BasicData"/>
 </launchConfiguration>

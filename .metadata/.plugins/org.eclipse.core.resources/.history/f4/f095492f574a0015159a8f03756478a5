@@ -1,0 +1,18 @@
+package com.collection.map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapDemo1 {
+
+	public static void main(String[] args) {
+		Map map = new HashMap();
+		map.put(1, "hehe1");
+		map.put(2, "hehe2");
+		map.put(3, "hehe3");
+		map.put(4, "hehe4");
+		System.out.println(map.put(1, "haha"));
+		System.out.println(map);
+	}
+
+}

@@ -1,0 +1,49 @@
+package com.collection.map;
+
+public class Student implements Comparable{
+	private String name;
+	private int age;
+	Student(String name,int age)
+	{
+		this.name = name;
+		this.age = age;
+	}
+	Student()
+	{
+	}
+	@Override
+	public int hashCode()
+	{
+		return this.age*39 + this.name.hashCode();
+	}
+	@Override
+	public boolean equals(Object obj)
+	{
+		if(this == obj)
+			return true;
+		if(!(obj instanceof Student))
+			throw new ClassCastException("¿‡–Õ≤ª∆•≈‰");
+		Student st = (Student)obj;
+		return st.name.equals(this.name)&& st.age == this.age;
+		
+	}
+	//get & set
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
+	public int compare(Object obj1,Object obj2)
+	{
+		return 0;
+	}
+}

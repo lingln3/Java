@@ -1,0 +1,49 @@
+package com.basic.learning.bean;
+
+public class Person {
+	private String name;
+	private int age;
+	//constructor
+	public Person(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	
+	public Person() {
+		super();
+	}
+
+	@Override
+	public int hashCode() {		
+		System.out.println(this+"¡­¡­hashCode");
+		return age*39+name.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Person p = (Person)obj;
+		System.out.println(this.name+"¡­¡­equals");
+		return this.name.equals(p.name) && (this.age == p.age);
+	}
+
+	public String toString()
+	{
+		return this.name;
+	}
+	//get & set
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
+}
