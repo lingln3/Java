@@ -1,0 +1,8 @@
+package com.generic.demo;
+
+public interface GenericInterface<T>{
+	public void show(T t)
+	{
+		
+	}
+}

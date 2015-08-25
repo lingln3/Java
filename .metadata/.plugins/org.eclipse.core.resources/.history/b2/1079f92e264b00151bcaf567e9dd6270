@@ -1,0 +1,46 @@
+package com.toolclass.collections.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class NonToSynchronized {
+	public static void main(String[] args)
+	{
+		List list = new ArrayList();
+		list = MyCollections.synList(list);
+				
+	}
+
+}
+class MyCollections{
+	public static List synList(List list)
+	{
+		return new MyList(list);
+	}
+	private abstract class MyList implements List
+	{
+		private List list;
+		static final Object lock = new Object();
+		MyList(List list)
+		{
+			this.list = list;
+		}
+		@Override
+		public boolean add(Object obj)
+		{
+			synchronized(lock)
+			{
+				return this.add(obj);
+			}
+		}
+		
+		public boolean remove(Object obj)
+		{
+			synchronized(lock)
+			{
+				return this.remove(obj);
+			}
+		}
+		
+	}
+}

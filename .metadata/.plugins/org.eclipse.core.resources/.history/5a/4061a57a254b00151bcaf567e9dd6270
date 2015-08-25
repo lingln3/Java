@@ -1,0 +1,16 @@
+package com.toolclass.collections.demo;
+
+import java.util.List;
+
+public class NonToSynchronized {
+
+	private class MyList implements List
+	{
+		private List list;
+		private static final Object obj = new Object();
+		MyList(List list)
+		{
+			this.list = list;
+		}
+	}
+}

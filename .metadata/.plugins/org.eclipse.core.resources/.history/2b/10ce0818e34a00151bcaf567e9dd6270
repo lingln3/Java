@@ -1,0 +1,5 @@
+package com.generic.demo.bean;
+
+public class Worker extends Person {
+
+}

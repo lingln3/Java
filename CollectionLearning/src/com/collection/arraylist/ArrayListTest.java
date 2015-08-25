@@ -12,6 +12,7 @@ public class ArrayListTest {
 		p1 = new Person("lina1",20),
 		p2 = new Person("lina2",21);
 		ArrayList al = new ArrayList();
+		al.add(1);
 		al.add(p1);
 		al.add(new Person("lina2",19));
 		al.add(new Person("lina3",18));

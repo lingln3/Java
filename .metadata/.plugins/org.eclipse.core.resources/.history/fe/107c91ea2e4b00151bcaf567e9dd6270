@@ -1,0 +1,12 @@
+package com.toolclass.arrays.demo;
+/*
+ * 集合转成数组
+ * 使用的是Collection接口中的ToArray()方法。
+ */
+public class ToArray {
+
+	public static void main(String[] args) {
+
+	}
+
+}

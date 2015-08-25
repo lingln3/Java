@@ -1,0 +1,46 @@
+package com.collection.map;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+/*
+ * 练习
+ * 输入一串字符，打印每一个字母出现的次数
+ * 如：输入“fdgavcbsacdfa”
+ * 输出：a(2)b(1)……
+ */
+public class MapTest {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String s = scan.nextLine();
+		TreeMap<String,Integer> tm = new TreeMap<String,Integer>();
+		put(tm,s);
+		Iterator<Map.Entry<String, Integer>> it = tm.entrySet().iterator();
+		while(it.hasNext())
+		{
+			Map.Entry<String, Integer> me = it.next();
+			String key = me.getKey();
+			Integer value = me.getValue();
+			System.out.print(key+"("+value+")");
+		}
+		
+	}
+	public static void put(TreeMap<String,Integer> tm,String s)
+	{
+		char[] ch = s.toCharArray();
+		for(int i=0; i<ch.length; i++)
+		{
+			if(!tm.containsKey(ch[i]))
+				tm.put(""+ch[i], 1);
+			else
+			{
+				int value = tm.get(ch[i])+1;
+				tm.put(""+ch[i], value);
+			}
+		}
+	}
+
+}

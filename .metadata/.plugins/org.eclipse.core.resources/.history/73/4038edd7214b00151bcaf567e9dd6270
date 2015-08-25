@@ -1,0 +1,21 @@
+package com.toolclass.collections.demo;
+
+import java.util.Collections;
+import java.util.TreeSet;
+
+public class ReverseOrderDemo {
+
+	public static void main(String[] args) {
+//		TreeSet<String> ts = new TreeSet<String>(Collections.reverseOrder());
+		TreeSet<String> ts = new TreeSet<String>();
+		ts.add("abc");
+		ts.add("ac");
+		ts.add("cbd");
+		ts.add("efe");
+		ts.add("adaskj");
+		ts.add("sldje");
+		System.out.println(ts);
+		System.out.println(Collections.reverse(list));
+	}
+
+}

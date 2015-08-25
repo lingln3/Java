@@ -1,0 +1,15 @@
+package com.generic.demo;
+
+import com.generic.demo.bean.Person;
+
+public class Tool {
+	private Person person;
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}	
+}

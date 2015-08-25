@@ -1,0 +1,22 @@
+package com.toolclass.collections.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ReplaceAllDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> list = new ArrayList<String>();
+		list.add("abc");
+		list.add("abc2");
+		list.add("abc3");
+		list.add("abc5");
+	}
+	public static <T> void myReplaceAll(List<T> list)
+	{
+		
+		
+	}
+
+}

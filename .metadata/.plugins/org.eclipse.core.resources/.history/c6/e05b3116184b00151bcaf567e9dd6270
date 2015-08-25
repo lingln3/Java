@@ -1,0 +1,27 @@
+package com.toolclass.collections.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SortDemo {
+
+	public static void main(String[] args) {
+		/*
+		 * Collections：是集合框架的工具类
+		 * 里面的方法都是static静态方法
+		 */
+		demo1();
+	}
+	public static void demo1()
+	{
+		List<String> list = new ArrayList<String>();
+		list.add("abc");
+		list.add("cbd");
+		list.add("efe");
+		list.add("adaskj");
+		list.add("sldje");
+		
+		//对list结合进行指定顺序的排序
+		System.out.println(list);
+	}
+}

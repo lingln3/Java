@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 import com.collection.map.Student;
 
-public class CompareByLength implements Comparator{
+public class CompareByLength implements Comparator<Object>{
 	@Override
 	public int compare(Object obj1,Object obj2)
 	{

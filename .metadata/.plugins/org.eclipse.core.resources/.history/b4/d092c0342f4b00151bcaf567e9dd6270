@@ -1,0 +1,13 @@
+package com.toolclass.arrays.demo;
+/*
+ * 集合转成数组
+ * 使用的是Collection接口中的ToArray()方法。
+ * 集合变数组，可以对集合中的元素操作的方法进行限定：不允许对其进行增删
+ */
+public class ToArray {
+
+	public static void main(String[] args) {
+
+	}
+
+}

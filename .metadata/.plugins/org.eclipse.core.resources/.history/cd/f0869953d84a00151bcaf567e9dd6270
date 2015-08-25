@@ -1,0 +1,14 @@
+package com.generic.demo;
+
+import java.util.TreeSet;
+
+import com.generic.demo.bean.Person;
+
+public class GenericDemo2 {
+
+	public static void main(String[] args) {
+		TreeSet<Person> ts = new TreeSet<Person>();
+		ts.add(new Person("lisi",))
+	}
+
+}

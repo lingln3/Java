@@ -1,0 +1,12 @@
+package com.toolclass.arrays.demo;
+/*
+ * æ≤Ã¨µº»Î
+ */
+public class StaticInput {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

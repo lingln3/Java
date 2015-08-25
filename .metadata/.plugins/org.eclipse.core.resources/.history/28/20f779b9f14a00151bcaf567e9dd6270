@@ -1,0 +1,24 @@
+package com.generic.demo;
+
+import java.util.ArrayList;
+
+public class GenericDemo6 {
+
+	public static void main(String[] args) {
+		ArrayList<String> al1 = new ArrayList<String>();
+		al1.add("abc1");
+		al1.add("abc2");
+		al1.add("abc3");
+		al1.add("abc4");
+		ArrayList<Integer> al2 = new ArrayList<Integer>();
+		al2.add(2);
+		al2.add(5);
+		al2.add(4);
+		al2.add(7);
+	}
+	public static<T> void iteratorCollection(ArrayList<T> al)
+	{
+		Iterator<t> it = al.iterator();
+	}
+
+}

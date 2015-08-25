@@ -1,0 +1,11 @@
+package com.toolclass.arrays.demo;
+/*
+ * 集合转成数组
+ */
+public class ToArray {
+
+	public static void main(String[] args) {
+
+	}
+
+}

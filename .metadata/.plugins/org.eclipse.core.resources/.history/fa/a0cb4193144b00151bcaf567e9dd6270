@@ -1,0 +1,13 @@
+package com.collection.map;
+/*
+ * Map集合在有映射关系时，可以优先考虑
+ * 在查表法中的应用较为多见
+ */
+public class MapTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

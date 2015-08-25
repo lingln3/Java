@@ -1,0 +1,9 @@
+package com.generic.demo;
+
+public class GenericDemo3 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.generic.demo;
+
+//import com.generic.demo.bean.Object;
+
+public class Tool {
+	
+	private Object Object;
+
+	public Object getObject() {
+		return Object;
+	}
+
+	public void setObject(Object Object) {
+		this.Object = Object;
+	}	
+}

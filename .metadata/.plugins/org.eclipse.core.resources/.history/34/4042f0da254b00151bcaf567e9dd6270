@@ -1,0 +1,31 @@
+package com.toolclass.collections.demo;
+
+import java.util.List;
+
+public class NonToSynchronized {
+
+	private class MyList implements List
+	{
+		private List list;
+		private static final Object lock = new Object();
+		MyList(List list)
+		{
+			this.list = list;
+		}
+		public boolean add(Object obj)
+		{
+			synchronized(lock)
+			{
+				return this.add(obj);
+			}
+		}
+		
+		public boolean remove(Object obj)
+		{
+			synchronized(lock)
+			{
+				return this.remove(obj);
+			}
+		}
+	}
+}

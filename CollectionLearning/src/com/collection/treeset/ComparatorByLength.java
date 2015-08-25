@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 import com.basic.learning.bean.Person;
 
-public class ComparatorByLength implements Comparator{
+public class ComparatorByLength implements Comparator<Object>{
 
 	@Override
 	public int compare(Object obj1,Object obj2)

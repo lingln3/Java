@@ -1,0 +1,5 @@
+package com.toolclass.collections.demo;
+
+public class NonToSynchronized {
+
+}

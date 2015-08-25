@@ -1,0 +1,13 @@
+package com.generic.demo.bean;
+
+import java.util.Comparator;
+
+public class ComparatorByName implements Comparator<Person>{
+	
+	@Override
+	public int compare(Person p1,Person p2)
+	{
+		return 0;
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.toolclass.arrays.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ * Arrays.asList()将数组转为集合
+ */
+public class ArraysAsListDemo {
+
+	public static void main(String[] args) {
+		int[] arr = {3,2,34,56,3,7};
+		List list = myAsList(arr);
+	}
+	public static <T> List myAsList(T[] t)
+	{
+		List<T> list = new ArrayList<T>();
+		for(T t1:t)
+		{
+			list.add(t1);
+		}
+		return list;
+	}
+	
+}

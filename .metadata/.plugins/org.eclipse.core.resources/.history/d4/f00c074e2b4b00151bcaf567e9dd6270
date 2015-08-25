@@ -1,0 +1,10 @@
+package com.toolclass.arrays.demo;
+
+public class ArraysAsListDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

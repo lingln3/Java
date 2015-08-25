@@ -1,0 +1,9 @@
+package com.toolclass.arrays.demo;
+
+public class ParameterDemo {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -9,15 +9,19 @@ public class TreeSetDemo {
 
 	public static void main(String[] args) {
 //		demo1();
-//		demo2();
+		demo2();
 //		demo3();
-		TreeSet ts = new TreeSet(new ComparatorByLength());
+//		demo4();
+	}
+
+	public static void demo4() {
+		TreeSet<Person> ts = new TreeSet<Person>(new ComparatorByLength());
 		ts.add(new Person("zhangsan",30));
 		ts.add(new Person("lisi",24));
 		ts.add(new Person("wangwu",23));
 		ts.add(new Person("zhaoliu",23));
 		ts.add(new Person("bigan",23));
-		Iterator it = ts.iterator();
+		Iterator<Person> it = ts.iterator();
 		while(it.hasNext())
 		{
 			System.out.println(it.next());

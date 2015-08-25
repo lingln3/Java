@@ -1,0 +1,27 @@
+package com.toolclass.arrays.demo;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+/*
+ * 集合转成数组
+ * 使用的是Collection接口中的ToArray()方法。
+ * 集合变数组，可以对集合中的元素操作的方法进行限定：不允许对其进行增删
+ */
+public class ToArray {
+
+	public static void main(String[] args) {
+		List<String> list = new ArrayList<String>();
+		list.add("abc1");
+		list.add("abc2");
+		list.add("abc3");
+		list.add("abc4");
+		String[] arr = list.toArray(new String[2]);
+		System.out.println(arr);
+	}
+	public static <T> T[] myToArray(Collection<T> c)
+	{
+//		T[] t = new T[c.size()];
+	}
+}

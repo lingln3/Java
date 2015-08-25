@@ -1,0 +1,22 @@
+package com.toolclass.arrays.demo;
+
+public class ParameterDemo {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public static int newAdd(int... arr)
+	{
+		int sum = 0;
+		return sum;
+	}
+	
+	public static int add(int[] arr)
+	{
+		int sum = 0;
+		for(int i: arr)
+			sum = sum + i;
+		return sum;
+	}
+}

@@ -58,6 +58,7 @@ public class Person implements Comparable{
 		/*int temp = this.age - p.age;
 		return temp==0 ? this.name.compareTo(p.name):temp;*/
 		//°´ĞÕÃûÅÅĞò
+		System.out.println("compareTo¡­¡­");
 		int temp = this.name.compareTo(p.name);
 		return temp == 0? (this.age-p.age):temp;
 		/*if(this.age > p.age)

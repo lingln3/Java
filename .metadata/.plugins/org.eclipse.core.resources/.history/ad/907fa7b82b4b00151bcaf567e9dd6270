@@ -1,0 +1,12 @@
+package com.toolclass.arrays.demo;
+
+/*
+ * Arrays.asList()将数组转为集合
+ */
+public class ArraysAsListDemo {
+
+	public static void main(String[] args) {
+
+	}
+
+}
