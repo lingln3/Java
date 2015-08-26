@@ -1,0 +1,14 @@
+package com.otherclass.date;
+
+import java.text.DateFormat;
+
+public class DateFormatDemo {
+
+	public static void main(String[] args) {
+		/*
+		 * 对日期对象进行格式化
+		 */
+		DateFormat myDate = DateFormat.getInstance();
+	}
+
+}

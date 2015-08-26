@@ -1,0 +1,19 @@
+package com.otherclass.date;
+
+import java.text.DateFormat;
+import java.util.Date;
+
+public class DateFormatDemo {
+
+	public static void main(String[] args) {
+		/*
+		 * 对日期对象进行格式化
+		 */
+		Date date = new Date();
+		//获取日期格式器，该格式器具有默认语言环境的默认格式化风格
+		DateFormat myDateFormat = DateFormat.getInstance();
+		
+		String str_date = myDateFormat.format(date);
+	}
+
+}

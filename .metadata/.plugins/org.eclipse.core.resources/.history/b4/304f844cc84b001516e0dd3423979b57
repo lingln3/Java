@@ -1,0 +1,55 @@
+java.runtime.name:::Java(TM) SE Runtime Environment
+sun.boot.library.path:::E:\postgraduate\bishe\android\jdk8\jre\bin
+java.vm.version:::25.20-b23
+java.vm.vendor:::Oracle Corporation
+java.vendor.url:::http://java.oracle.com/
+path.separator:::;
+java.vm.name:::Java HotSpot(TM) Client VM
+file.encoding.pkg:::sun.io
+user.script:::
+user.country:::CN
+sun.java.launcher:::SUN_STANDARD
+sun.os.patch.level:::Service Pack 1
+java.vm.specification.name:::Java Virtual Machine Specification
+user.dir:::E:\postgraduate\bishe\Java\OtherClassLearning
+java.runtime.version:::1.8.0_20-b26
+java.awt.graphicsenv:::sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs:::E:\postgraduate\bishe\android\jdk8\jre\lib\endorsed
+os.arch:::x86
+java.io.tmpdir:::C:\Users\ADMINI~1\AppData\Local\Temp\
+line.separator:::
+
+java.vm.specification.vendor:::Oracle Corporation
+user.variant:::
+os.name:::Windows 7
+sun.jnu.encoding:::GBK
+java.library.path:::E:\postgraduate\bishe\android\jdk8\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;E:/postgraduate/bishe/android/jdk8/bin/../jre/bin/client;E:/postgraduate/bishe/android/jdk8/bin/../jre/bin;E:/postgraduate/bishe/android/jdk8/bin/../jre/lib/i386;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;E:\postgraduate\bishe\android\jdk8\bin;E:\postgraduate\bishe\android\adt-windows-x86\sdk\tools;E:\postgraduate\bishe\android\adt-windows-x86\sdk\platform-tools;E:\postgraduate\bishe\android\adt-windows-x86\sdk\build-tools;E:\postgraduate\bishe\SQLite\MSQLite\MySQL Utilities 1.3.6\;D:\soft-setup\minGW\bin;D:\soft-setup\minGW\msys\1.0\bin;D:\soft-download\6kuaibo\bin;C:\Program Files\OpenVPN\bin;D:\soft-setup\Mashang6\bin;E:\postgraduate\bishe\android\eclipse;;.
+java.specification.name:::Java Platform API Specification
+java.class.version:::52.0
+sun.management.compiler:::HotSpot Client Compiler
+os.version:::6.1
+user.home:::C:\Users\Administrator
+user.timezone:::
+java.awt.printerjob:::sun.awt.windows.WPrinterJob
+file.encoding:::GBK
+java.specification.version:::1.8
+user.name:::Administrator
+java.class.path:::E:\postgraduate\bishe\Java\OtherClassLearning\bin
+java.vm.specification.version:::1.8
+sun.arch.data.model:::32
+java.home:::E:\postgraduate\bishe\android\jdk8\jre
+sun.java.command:::com.otherclass.currenttime.GetPropertiesDemo
+java.specification.vendor:::Oracle Corporation
+user.language:::zh
+awt.toolkit:::sun.awt.windows.WToolkit
+java.vm.info:::mixed mode, sharing
+java.version:::1.8.0_20
+java.ext.dirs:::E:\postgraduate\bishe\android\jdk8\jre\lib\ext;C:\windows\Sun\Java\lib\ext
+sun.boot.class.path:::E:\postgraduate\bishe\android\jdk8\jre\lib\resources.jar;E:\postgraduate\bishe\android\jdk8\jre\lib\rt.jar;E:\postgraduate\bishe\android\jdk8\jre\lib\sunrsasign.jar;E:\postgraduate\bishe\android\jdk8\jre\lib\jsse.jar;E:\postgraduate\bishe\android\jdk8\jre\lib\jce.jar;E:\postgraduate\bishe\android\jdk8\jre\lib\charsets.jar;E:\postgraduate\bishe\android\jdk8\jre\lib\jfr.jar;E:\postgraduate\bishe\android\jdk8\jre\classes
+java.vendor:::Oracle Corporation
+file.separator:::\
+java.vendor.url.bug:::http://bugreport.sun.com/bugreport/
+sun.cpu.endian:::little
+sun.io.unicode.encoding:::UnicodeLittle
+sun.desktop:::windows
+sun.cpu.isalist:::pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86

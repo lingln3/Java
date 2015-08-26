@@ -1,0 +1,15 @@
+package com.otherclass.math;
+
+public class MathDemo {
+
+	private static final String LINE_SEPARATOR = System.getProperty("line.separator");
+	public static void main(String[] args) {
+		/*
+		 * Math提供了操作数字
+		 */
+		double ceil = Math.ceil(12.324);
+		double floor = Math.floor(12.324);
+		System.out.println(ceil + LINE_SEPARATOR + floor);
+	}
+
+}

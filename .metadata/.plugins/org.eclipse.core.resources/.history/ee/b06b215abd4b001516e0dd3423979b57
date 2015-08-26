@@ -1,0 +1,12 @@
+package com.otherclass.date;
+
+public abstract class Test {
+	public void show()
+	{
+		
+	}
+	public void println()
+	{
+		
+	}
+}

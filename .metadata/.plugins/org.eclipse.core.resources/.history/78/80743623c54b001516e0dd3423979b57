@@ -1,0 +1,14 @@
+package com.otherclass.date;
+
+/*
+ * 练习：
+ * “2013-3-17”到“2015-8-26”
+ * 中间有多少天？ 
+ */
+public class DateTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}

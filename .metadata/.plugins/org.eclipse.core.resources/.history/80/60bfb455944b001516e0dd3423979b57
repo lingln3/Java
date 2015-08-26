@@ -1,0 +1,42 @@
+package com.otherclass.currenttime;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+public class GetPropertiesDemo {
+
+	public static void main(String[] args) {
+//		demo1();
+//		demo2();
+		System.out.println("hello world\rnihao");
+	}
+	public static void demo1()
+	{
+		/*
+		 * 获取系统的属性信息，并将其存储到Properties集合中。
+		 * Properties是HashTable的子类
+		 */
+		Properties prop = System.getProperties();
+		Set<Map.Entry<Object,Object>> set = prop.entrySet();
+		Iterator<Map.Entry<Object, Object>> it = set.iterator();
+		while(it.hasNext())
+		{
+			Map.Entry<Object, Object> next = it.next();
+			Object key = next.getKey();
+			Object value = next.getValue();
+			System.out.println("key:"+key + "……"+"value:"+value);
+		}
+	}
+	public static void demo2()
+	{
+		Properties prop = System.getProperties();
+		Set<String> nameSet = prop.stringPropertyNames();
+		for(String name:nameSet)
+		{
+			String value = prop.getProperty(name);
+			System.out.println(name+":::"+value);
+		}
+	}
+}

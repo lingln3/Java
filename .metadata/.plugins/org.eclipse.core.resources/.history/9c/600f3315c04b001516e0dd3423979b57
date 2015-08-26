@@ -1,0 +1,11 @@
+package com.otherclass.date;
+
+import java.text.DateFormat;
+
+public class DateFormatDemo {
+
+	public static void main(String[] args) {
+		DateFormat myDate = DateFormat.getInstance();
+	}
+
+}

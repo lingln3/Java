@@ -1,0 +1,18 @@
+package com.otherclass.currenttime;
+
+import java.util.Properties;
+
+public class GetPropertiesDemo {
+
+	public static void main(String[] args) {
+		
+	}
+	public static void demo1()
+	{
+		/*
+		 * 获取系统的属性信息，并将其存储到Properties集合中。
+		 * Properties是HashTable的子类
+		 */
+		Properties prop = System.getProperties();
+	}
+}

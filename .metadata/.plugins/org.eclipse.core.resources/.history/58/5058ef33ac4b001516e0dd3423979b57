@@ -1,0 +1,28 @@
+package com.otherclass.date;
+
+import java.util.Date;
+
+public class DateDemo {
+
+	public static void main(String[] args) {
+		long time = System.currentTimeMillis();
+		System.out.println(time);
+		
+		Date date = new Date();//将当前日期和时间封装成Date对象
+		System.out.println(date);
+		
+		Date date2 = new Date(time);//将指定毫秒值封装成Date对象
+		System.out.println(date2);
+	}
+	/*日期对象和毫秒值之间的转换
+	 * 
+	 * 毫秒值->日期对象：
+	 * 	1. 通过Date对象的构造方法 new Date(timeMillis);
+	 *  2. 还可以通过setTime设置
+	 * 因为，可以通过对象的方法对该日期中的各个字段（年月日）进行操作。
+	 * 
+	 * 日期对象->毫秒值
+	 *  1. getTime对象
+	 * 
+	 */
+}

@@ -1,0 +1,13 @@
+package com.otherclass.calendar;
+
+import java.util.Calendar;
+
+public class CalendarDemo {
+
+	public static void main(String[] args) {
+		Calendar cl = Calendar.getInstance();
+		int year = c1.get(Calendar.YEAR);
+		System.out.println();
+	}
+
+}
