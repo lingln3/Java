@@ -1,4 +1,4 @@
-package com.iostream.zijieliu;
+package com.iostream.zifuliu;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,10 +7,13 @@ public class FileReaderDemo {
 
 	public static void main(String[] args) {
 		FileReader fr = null;
+		int ch = 0;
 		try
 		{
 			fr = new FileReader("demo.txt");
-			int ch = fr.read();
+			while((ch = fr.read())!=-1)
+				System.out.println(ch);
+			/*int ch = fr.read();
 			System.out.println(ch);
 			ch = fr.read();
 			System.out.println(ch);
@@ -19,7 +22,7 @@ public class FileReaderDemo {
 			ch = fr.read();
 			System.out.println(ch);
 			ch = fr.read();
-			System.out.println(ch);
+			System.out.println(ch);*/
 		}catch(IOException e)
 		{
 			System.out.println(e.toString());

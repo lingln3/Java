@@ -1,4 +1,4 @@
-package com.iostream.zijieliu;
+package com.iostream.zifuliu;
 
 import java.io.FileWriter;
 import java.io.IOException;
