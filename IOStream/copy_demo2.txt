@@ -1,7 +1,0 @@
-abcdef
-使用了BufferWriter缓冲区
-使用了缓冲区的自定义换行方法newLine()abcdef
-使用了BufferWriter缓冲区
-使用了缓冲区的自定义换行方法newLine()循环了1次
-循环了2次
-循环了3次

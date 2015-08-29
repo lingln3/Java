@@ -9,7 +9,7 @@ public class Demo1 {
 	public static void main(String[] args) throws IOException
 	{
 //		demo_write();
-		demo_read2();
+		demo_read();
 	}
 	public static void demo_write() throws FileNotFoundException
 	{
@@ -41,7 +41,7 @@ public class Demo1 {
 		while((ch = fis.read())!= -1)
 		{
 			System.out.println(fis.available());
-			System.out.println((char)ch);
+			System.out.println(ch);
 		}
 		fis.close();
 	}

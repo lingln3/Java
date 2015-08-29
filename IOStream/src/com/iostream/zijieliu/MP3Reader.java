@@ -12,6 +12,7 @@ public class MP3Reader {
 		copy3();
 	}
 	
+	
 	public static void copy3() throws IOException
 	{
 		//使用自带的缓冲区BufferedInputStream,BufferedOutputStream
